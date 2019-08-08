@@ -1,0 +1,370 @@
+[ec2-user@ip-172-31-46-121 ~]$ cat /var/log/cloud-init-output.log
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init-local' at Wed, 07 Aug 2019 11:55:2                                                                                                                     5 +0000. Up 7.33 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init' at Wed, 07 Aug 2019 11:55:27 +000                                                                                                                     0. Up 9.51 seconds.
+ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++                                                                                                                     ++++++++++++++++++++
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |                                                                                                                          Hw-Address    |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: |  eth0  | True |       172.31.46.121        | 255.255.240.0 | global |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |  eth0  | True | fe80::66:daff:fe05:9e06/64 |       .       |  link  |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |                                                                                                                              .         |
+ci-info: |   lo   | True |          ::1/128           |       .       |  host  |                                                                                                                              .         |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: ++++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++                                                                                                                     ++++++++
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: | Route |   Destination   |   Gateway   |     Genmask     | Interface |                                                                                                                      Flags |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: |   0   |     0.0.0.0     | 172.31.32.1 |     0.0.0.0     |    eth0   |                                                                                                                        UG  |
+ci-info: |   1   | 169.254.169.254 |   0.0.0.0   | 255.255.255.255 |    eth0   |                                                                                                                        UH  |
+ci-info: |   2   |   172.31.32.0   |   0.0.0.0   |  255.255.240.0  |    eth0   |                                                                                                                        U   |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: | Route | Destination | Gateway | Interface | Flags |
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: |   9   |  fe80::/64  |    ::   |    eth0   |   U   |
+ci-info: |   11  |    local    |    ::   |    eth0   |   U   |
+ci-info: |   12  |   ff00::/8  |    ::   |    eth0   |   U   |
+ci-info: +-------+-------------+---------+-----------+-------+
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:config' at Wed, 07 Aug 2019 11:                                                                                                                     55:29 +0000. Up 11.49 seconds.
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Existing lock /var/run/yum.pid: another copy is running as pid 3272.
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  31 M RSS (247 MB VSZ)
+    Started: Wed Aug  7 11:55:28 2019 - 00:02 ago
+    State  : Running, pid: 3272
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  63 M RSS (354 MB VSZ)
+    Started: Wed Aug  7 11:55:28 2019 - 00:04 ago
+    State  : Running, pid: 3272
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory : 103 M RSS (397 MB VSZ)
+    Started: Wed Aug  7 11:55:28 2019 - 00:06 ago
+    State  : Uninterruptible, pid: 3272
+ --> ec2-hibinit-agent-1.0.0-3.amzn2.noarch from installed removed (updateinfo)
+ --> amazon-ssm-agent-2.3.372.0-1.amzn2.x86_64 from installed removed (updateinf                                                                                                                     o)
+ --> amazon-ssm-agent-2.3.612.0-1.amzn2.x86_64 from amzn2-core removed (updatein                                                                                                                     fo)
+ --> nss-softokn-freebl-3.36.0-5.amzn2.0.1.x86_64 from amzn2-core removed (updat                                                                                                                     einfo)
+ --> ec2-hibinit-agent-1.0.0-4.amzn2.noarch from amzn2-core removed (updateinfo)
+ --> nss-softokn-3.36.0-5.amzn2.x86_64 from installed removed (updateinfo)
+ --> systemtap-runtime-3.2-4.amzn2.0.2.x86_64 from installed removed (updateinfo                                                                                                                     )
+ --> curl-7.61.1-11.amzn2.0.2.x86_64 from amzn2-core removed (updateinfo)
+ --> nss-softokn-freebl-3.36.0-5.amzn2.x86_64 from installed removed (updateinfo                                                                                                                     )
+ --> systemtap-runtime-4.1-0.20190208git4e76869512d2.amzn2.0.2.x86_64 from amzn2                                                                                                                     -core removed (updateinfo)
+ --> libcurl-7.61.1-11.amzn2.0.2.x86_64 from amzn2-core removed (updateinfo)
+ --> curl-7.61.1-9.amzn2.0.1.x86_64 from installed removed (updateinfo)
+ --> nss-softokn-3.36.0-5.amzn2.0.1.x86_64 from amzn2-core removed (updateinfo)
+ --> libcurl-7.61.1-9.amzn2.0.1.x86_64 from installed removed (updateinfo)
+8 package(s) needed (+0 related) for security, out of 15 available
+Resolving Dependencies
+--> Running transaction check
+---> Package bind-libs.x86_64 32:9.9.4-73.amzn2.1.2 will be updated
+---> Package bind-libs.x86_64 32:9.9.4-74.amzn2.1.2 will be an update
+---> Package bind-libs-lite.x86_64 32:9.9.4-73.amzn2.1.2 will be updated
+---> Package bind-libs-lite.x86_64 32:9.9.4-74.amzn2.1.2 will be an update
+---> Package bind-license.noarch 32:9.9.4-73.amzn2.1.2 will be updated
+---> Package bind-license.noarch 32:9.9.4-74.amzn2.1.2 will be an update
+---> Package bind-utils.x86_64 32:9.9.4-73.amzn2.1.2 will be updated
+---> Package bind-utils.x86_64 32:9.9.4-74.amzn2.1.2 will be an update
+---> Package kernel-tools.x86_64 0:4.14.123-111.109.amzn2 will be updated
+---> Package kernel-tools.x86_64 0:4.14.133-113.112.amzn2 will be an update
+---> Package python.x86_64 0:2.7.14-58.amzn2.0.4 will be updated
+---> Package python.x86_64 0:2.7.16-1.amzn2.0.1 will be an update
+---> Package python-devel.x86_64 0:2.7.14-58.amzn2.0.4 will be updated
+---> Package python-devel.x86_64 0:2.7.16-1.amzn2.0.1 will be an update
+---> Package python-libs.x86_64 0:2.7.14-58.amzn2.0.4 will be updated
+---> Package python-libs.x86_64 0:2.7.16-1.amzn2.0.1 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package            Arch       Version                     Repository      Size
+================================================================================
+Updating:
+ bind-libs          x86_64     32:9.9.4-74.amzn2.1.2       amzn2-core     1.0 M
+ bind-libs-lite     x86_64     32:9.9.4-74.amzn2.1.2       amzn2-core     744 k
+ bind-license       noarch     32:9.9.4-74.amzn2.1.2       amzn2-core      87 k
+ bind-utils         x86_64     32:9.9.4-74.amzn2.1.2       amzn2-core     207 k
+ kernel-tools       x86_64     4.14.133-113.112.amzn2      amzn2-core     115 k
+ python             x86_64     2.7.16-1.amzn2.0.1          amzn2-core      92 k
+ python-devel       x86_64     2.7.16-1.amzn2.0.1          amzn2-core     402 k
+ python-libs        x86_64     2.7.16-1.amzn2.0.1          amzn2-core     7.5 M
+
+Transaction Summary
+================================================================================
+Upgrade  8 Packages
+
+Total download size: 10 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+--------------------------------------------------------------------------------
+Total                                               37 MB/s |  10 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 32:bind-license-9.9.4-74.amzn2.1.2.noarch                   1/16
+  Updating   : python-libs-2.7.16-1.amzn2.0.1.x86_64                       2/16
+  Updating   : python-2.7.16-1.amzn2.0.1.x86_64                            3/16
+  Updating   : 32:bind-libs-9.9.4-74.amzn2.1.2.x86_64                      4/16
+  Updating   : 32:bind-utils-9.9.4-74.amzn2.1.2.x86_64                     5/16
+  Updating   : python-devel-2.7.16-1.amzn2.0.1.x86_64                      6/16
+  Updating   : 32:bind-libs-lite-9.9.4-74.amzn2.1.2.x86_64                 7/16
+  Updating   : kernel-tools-4.14.133-113.112.amzn2.x86_64                  8/16
+  Cleanup    : python-devel-2.7.14-58.amzn2.0.4.x86_64                     9/16
+  Cleanup    : python-2.7.14-58.amzn2.0.4.x86_64                          10/16
+  Cleanup    : 32:bind-utils-9.9.4-73.amzn2.1.2.x86_64                    11/16
+  Cleanup    : 32:bind-libs-9.9.4-73.amzn2.1.2.x86_64                     12/16
+  Cleanup    : 32:bind-libs-lite-9.9.4-73.amzn2.1.2.x86_64                13/16
+  Cleanup    : 32:bind-license-9.9.4-73.amzn2.1.2.noarch                  14/16
+  Cleanup    : python-libs-2.7.14-58.amzn2.0.4.x86_64                     15/16
+  Cleanup    : kernel-tools-4.14.123-111.109.amzn2.x86_64                 16/16
+  Verifying  : python-devel-2.7.16-1.amzn2.0.1.x86_64                      1/16
+  Verifying  : python-libs-2.7.16-1.amzn2.0.1.x86_64                       2/16
+  Verifying  : kernel-tools-4.14.133-113.112.amzn2.x86_64                  3/16
+  Verifying  : python-2.7.16-1.amzn2.0.1.x86_64                            4/16
+  Verifying  : 32:bind-libs-lite-9.9.4-74.amzn2.1.2.x86_64                 5/16
+  Verifying  : 32:bind-libs-9.9.4-74.amzn2.1.2.x86_64                      6/16
+  Verifying  : 32:bind-license-9.9.4-74.amzn2.1.2.noarch                   7/16
+  Verifying  : 32:bind-utils-9.9.4-74.amzn2.1.2.x86_64                     8/16
+  Verifying  : 32:bind-libs-9.9.4-73.amzn2.1.2.x86_64                      9/16
+  Verifying  : python-libs-2.7.14-58.amzn2.0.4.x86_64                     10/16
+  Verifying  : kernel-tools-4.14.123-111.109.amzn2.x86_64                 11/16
+  Verifying  : python-2.7.14-58.amzn2.0.4.x86_64                          12/16
+  Verifying  : python-devel-2.7.14-58.amzn2.0.4.x86_64                    13/16
+  Verifying  : 32:bind-license-9.9.4-73.amzn2.1.2.noarch                  14/16
+  Verifying  : 32:bind-utils-9.9.4-73.amzn2.1.2.x86_64                    15/16
+  Verifying  : 32:bind-libs-lite-9.9.4-73.amzn2.1.2.x86_64                16/16
+
+Updated:
+  bind-libs.x86_64 32:9.9.4-74.amzn2.1.2
+  bind-libs-lite.x86_64 32:9.9.4-74.amzn2.1.2
+  bind-license.noarch 32:9.9.4-74.amzn2.1.2
+  bind-utils.x86_64 32:9.9.4-74.amzn2.1.2
+  kernel-tools.x86_64 0:4.14.133-113.112.amzn2
+  python.x86_64 0:2.7.16-1.amzn2.0.1
+  python-devel.x86_64 0:2.7.16-1.amzn2.0.1
+  python-libs.x86_64 0:2.7.16-1.amzn2.0.1
+
+Complete!
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:final' at Wed, 07 Aug 2019 11:5                                                                                                                     5:42 +0000. Up 24.31 seconds.
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Existing lock /var/run/yum.pid: another copy is running as pid 3341.
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory :  56 M RSS (272 MB VSZ)
+    Started: Wed Aug  7 11:55:40 2019 - 00:03 ago
+    State  : Running, pid: 3341
+Another app is currently holding the yum lock; waiting for it to exit...
+  The other application is: yum
+    Memory : 101 M RSS (318 MB VSZ)
+    Started: Wed Aug  7 11:55:40 2019 - 00:05 ago
+    State  : Running, pid: 3341
+Resolving Dependencies
+--> Running transaction check
+---> Package amazon-ssm-agent.x86_64 0:2.3.372.0-1.amzn2 will be updated
+---> Package amazon-ssm-agent.x86_64 0:2.3.612.0-1.amzn2 will be an update
+---> Package curl.x86_64 0:7.61.1-9.amzn2.0.1 will be updated
+---> Package curl.x86_64 0:7.61.1-11.amzn2.0.2 will be an update
+---> Package ec2-hibinit-agent.noarch 0:1.0.0-3.amzn2 will be updated
+---> Package ec2-hibinit-agent.noarch 0:1.0.0-4.amzn2 will be an update
+---> Package kernel.x86_64 0:4.14.133-113.112.amzn2 will be installed
+---> Package libcurl.x86_64 0:7.61.1-9.amzn2.0.1 will be updated
+---> Package libcurl.x86_64 0:7.61.1-11.amzn2.0.2 will be an update
+---> Package nss-softokn.x86_64 0:3.36.0-5.amzn2 will be updated
+---> Package nss-softokn.x86_64 0:3.36.0-5.amzn2.0.1 will be an update
+---> Package nss-softokn-freebl.x86_64 0:3.36.0-5.amzn2 will be updated
+---> Package nss-softokn-freebl.x86_64 0:3.36.0-5.amzn2.0.1 will be an update
+---> Package systemtap-runtime.x86_64 0:3.2-4.amzn2.0.2 will be updated
+---> Package systemtap-runtime.x86_64 0:4.1-0.20190208git4e76869512d2.amzn2.0.2                                                                                                                      will be an update
+--> Processing Dependency: libjson-c.so.2()(64bit) for package: systemtap-runtim                                                                                                                     e-4.1-0.20190208git4e76869512d2.amzn2.0.2.x86_64
+--> Running transaction check
+---> Package json-c.x86_64 0:0.11-4.amzn2.0.3 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package            Arch   Version                             Repository  Size
+================================================================================
+Installing:
+ kernel             x86_64 4.14.133-113.112.amzn2              amzn2-core  20 M
+Updating:
+ amazon-ssm-agent   x86_64 2.3.612.0-1.amzn2                   amzn2-core  15 M
+ curl               x86_64 7.61.1-11.amzn2.0.2                 amzn2-core 343 k
+ ec2-hibinit-agent  noarch 1.0.0-4.amzn2                       amzn2-core  13 k
+ libcurl            x86_64 7.61.1-11.amzn2.0.2                 amzn2-core 291 k
+ nss-softokn        x86_64 3.36.0-5.amzn2.0.1                  amzn2-core 318 k
+ nss-softokn-freebl x86_64 3.36.0-5.amzn2.0.1                  amzn2-core 225 k
+ systemtap-runtime  x86_64 4.1-0.20190208git4e76869512d2.amzn2.0.2
+                                                               amzn2-core 442 k
+Installing for dependencies:
+ json-c             x86_64 0.11-4.amzn2.0.3                    amzn2-core  31 k
+
+Transaction Summary
+================================================================================
+Install  1 Package  (+1 Dependent package)
+Upgrade  7 Packages
+
+Total download size: 37 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+--------------------------------------------------------------------------------
+Total                                               68 MB/s |  37 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : libcurl-7.61.1-11.amzn2.0.2.x86_64                          1/16
+  Installing : json-c-0.11-4.amzn2.0.3.x86_64                              2/16
+  Updating   : nss-softokn-freebl-3.36.0-5.amzn2.0.1.x86_64                3/16
+  Updating   : nss-softokn-3.36.0-5.amzn2.0.1.x86_64                       4/16
+  Updating   : systemtap-runtime-4.1-0.20190208git4e76869512d2.amzn2.0.    5/16
+  Updating   : curl-7.61.1-11.amzn2.0.2.x86_64                             6/16
+  Updating   : amazon-ssm-agent-2.3.612.0-1.amzn2.x86_64                   7/16
+  Updating   : ec2-hibinit-agent-1.0.0-4.amzn2.noarch                      8/16
+  Installing : kernel-4.14.133-113.112.amzn2.x86_64                        9/16
+  Cleanup    : curl-7.61.1-9.amzn2.0.1.x86_64                             10/16
+  Cleanup    : nss-softokn-3.36.0-5.amzn2.x86_64                          11/16
+  Cleanup    : ec2-hibinit-agent-1.0.0-3.amzn2.noarch                     12/16
+  Cleanup    : nss-softokn-freebl-3.36.0-5.amzn2.x86_64                   13/16
+  Cleanup    : libcurl-7.61.1-9.amzn2.0.1.x86_64                          14/16
+  Cleanup    : amazon-ssm-agent-2.3.372.0-1.amzn2.x86_64                  15/16
+  Cleanup    : systemtap-runtime-3.2-4.amzn2.0.2.x86_64                   16/16
+  Verifying  : kernel-4.14.133-113.112.amzn2.x86_64                        1/16
+  Verifying  : nss-softokn-freebl-3.36.0-5.amzn2.0.1.x86_64                2/16
+  Verifying  : json-c-0.11-4.amzn2.0.3.x86_64                              3/16
+  Verifying  : systemtap-runtime-4.1-0.20190208git4e76869512d2.amzn2.0.    4/16
+  Verifying  : nss-softokn-3.36.0-5.amzn2.0.1.x86_64                       5/16
+  Verifying  : ec2-hibinit-agent-1.0.0-4.amzn2.noarch                      6/16
+  Verifying  : amazon-ssm-agent-2.3.612.0-1.amzn2.x86_64                   7/16
+  Verifying  : curl-7.61.1-11.amzn2.0.2.x86_64                             8/16
+  Verifying  : libcurl-7.61.1-11.amzn2.0.2.x86_64                          9/16
+  Verifying  : systemtap-runtime-3.2-4.amzn2.0.2.x86_64                   10/16
+  Verifying  : curl-7.61.1-9.amzn2.0.1.x86_64                             11/16
+  Verifying  : nss-softokn-3.36.0-5.amzn2.x86_64                          12/16
+  Verifying  : nss-softokn-freebl-3.36.0-5.amzn2.x86_64                   13/16
+  Verifying  : ec2-hibinit-agent-1.0.0-3.amzn2.noarch                     14/16
+  Verifying  : amazon-ssm-agent-2.3.372.0-1.amzn2.x86_64                  15/16
+  Verifying  : libcurl-7.61.1-9.amzn2.0.1.x86_64                          16/16
+
+Installed:
+  kernel.x86_64 0:4.14.133-113.112.amzn2
+
+Dependency Installed:
+  json-c.x86_64 0:0.11-4.amzn2.0.3
+
+Updated:
+  amazon-ssm-agent.x86_64 0:2.3.612.0-1.amzn2
+  curl.x86_64 0:7.61.1-11.amzn2.0.2
+  ec2-hibinit-agent.noarch 0:1.0.0-4.amzn2
+  libcurl.x86_64 0:7.61.1-11.amzn2.0.2
+  nss-softokn.x86_64 0:3.36.0-5.amzn2.0.1
+  nss-softokn-freebl.x86_64 0:3.36.0-5.amzn2.0.1
+  systemtap-runtime.x86_64 0:4.1-0.20190208git4e76869512d2.amzn2.0.2
+
+Complete!
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No package httpd.x86_x64 available.
+Error: Nothing to do
+Failed to start httpd.service: Unit not found.
+Failed to execute operation: No such file or directory
+/var/lib/cloud/instance/scripts/part-001: line 7: /var/www/html/index.html: No s                                                                                                                     uch file or directory
+Aug 07 11:56:12 cloud-init[3328]: util.py[WARNING]: Failed running /var/lib/clou                                                                                                                     d/instance/scripts/part-001 [1]
+Aug 07 11:56:12 cloud-init[3328]: cc_scripts_user.py[WARNING]: Failed to run mod                                                                                                                     ule scripts-user (scripts in /var/lib/cloud/instance/scripts)
+Aug 07 11:56:12 cloud-init[3328]: util.py[WARNING]: Running module scripts-user                                                                                                                      (<module 'cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packag                                                                                                                     es/cloudinit/config/cc_scripts_user.pyc'>) failed
+Cloud-init v. 18.2-72.amzn2.0.7 finished at Wed, 07 Aug 2019 11:56:12 +0000. Dat                                                                                                                     asource DataSourceEc2.  Up 54.51 seconds
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init-local' at Wed, 07 Aug 2019 12:07:0                                                                                                                     2 +0000. Up 5.13 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init' at Wed, 07 Aug 2019 12:07:05 +000                                                                                                                     0. Up 8.00 seconds.
+ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++                                                                                                                     ++++++++++++++++++++
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |                                                                                                                          Hw-Address    |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: |  eth0  | True |       172.31.46.121        | 255.255.240.0 | global |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |  eth0  | True | fe80::66:daff:fe05:9e06/64 |       .       |  link  |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |                                                                                                                              .         |
+ci-info: |   lo   | True |          ::1/128           |       .       |  host  |                                                                                                                              .         |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: ++++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++                                                                                                                     ++++++++
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: | Route |   Destination   |   Gateway   |     Genmask     | Interface |                                                                                                                      Flags |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: |   0   |     0.0.0.0     | 172.31.32.1 |     0.0.0.0     |    eth0   |                                                                                                                        UG  |
+ci-info: |   1   | 169.254.169.254 |   0.0.0.0   | 255.255.255.255 |    eth0   |                                                                                                                        UH  |
+ci-info: |   2   |   172.31.32.0   |   0.0.0.0   |  255.255.240.0  |    eth0   |                                                                                                                        U   |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: | Route | Destination | Gateway | Interface | Flags |
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: |   9   |  fe80::/64  |    ::   |    eth0   |   U   |
+ci-info: |   11  |    local    |    ::   |    eth0   |   U   |
+ci-info: |   12  |   ff00::/8  |    ::   |    eth0   |   U   |
+ci-info: +-------+-------------+---------+-----------+-------+
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:config' at Wed, 07 Aug 2019 12:                                                                                                                     07:06 +0000. Up 9.55 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:final' at Wed, 07 Aug 2019 12:0                                                                                                                     7:07 +0000. Up 10.22 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 finished at Wed, 07 Aug 2019 12:07:07 +0000. Dat                                                                                                                     asource DataSourceEc2.  Up 10.35 seconds
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init-local' at Thu, 08 Aug 2019 04:37:1                                                                                                                     5 +0000. Up 5.40 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init' at Thu, 08 Aug 2019 04:37:17 +000                                                                                                                     0. Up 7.99 seconds.
+ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++                                                                                                                     ++++++++++++++++++++
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |                                                                                                                          Hw-Address    |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: |  eth0  | True |       172.31.46.121        | 255.255.240.0 | global |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |  eth0  | True | fe80::66:daff:fe05:9e06/64 |       .       |  link  |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |                                                                                                                              .         |
+ci-info: |   lo   | True |          ::1/128           |       .       |  host  |                                                                                                                              .         |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: ++++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++                                                                                                                     ++++++++
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: | Route |   Destination   |   Gateway   |     Genmask     | Interface |                                                                                                                      Flags |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: |   0   |     0.0.0.0     | 172.31.32.1 |     0.0.0.0     |    eth0   |                                                                                                                        UG  |
+ci-info: |   1   | 169.254.169.254 |   0.0.0.0   | 255.255.255.255 |    eth0   |                                                                                                                        UH  |
+ci-info: |   2   |   172.31.32.0   |   0.0.0.0   |  255.255.240.0  |    eth0   |                                                                                                                        U   |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: | Route | Destination | Gateway | Interface | Flags |
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: |   9   |  fe80::/64  |    ::   |    eth0   |   U   |
+ci-info: |   11  |    local    |    ::   |    eth0   |   U   |
+ci-info: |   12  |   ff00::/8  |    ::   |    eth0   |   U   |
+ci-info: +-------+-------------+---------+-----------+-------+
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:config' at Thu, 08 Aug 2019 04:                                                                                                                     37:19 +0000. Up 9.41 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:final' at Thu, 08 Aug 2019 04:3                                                                                                                     7:19 +0000. Up 10.14 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 finished at Thu, 08 Aug 2019 04:37:20 +0000. Dat                                                                                                                     asource DataSourceEc2.  Up 10.28 seconds
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init-local' at Thu, 08 Aug 2019 04:42:5                                                                                                                     2 +0000. Up 5.75 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 running 'init' at Thu, 08 Aug 2019 04:42:55 +000                                                                                                                     0. Up 8.54 seconds.
+ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++                                                                                                                     ++++++++++++++++++++
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |                                                                                                                          Hw-Address    |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: |  eth0  | True |       172.31.46.121        | 255.255.240.0 | global |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |  eth0  | True | fe80::66:daff:fe05:9e06/64 |       .       |  link  |                                                                                                                      02:66:da:05:9e:06 |
+ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |                                                                                                                              .         |
+ci-info: |   lo   | True |          ::1/128           |       .       |  host  |                                                                                                                              .         |
+ci-info: +--------+------+----------------------------+---------------+--------+                                                                                                                     -------------------+
+ci-info: ++++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++                                                                                                                     ++++++++
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: | Route |   Destination   |   Gateway   |     Genmask     | Interface |                                                                                                                      Flags |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: |   0   |     0.0.0.0     | 172.31.32.1 |     0.0.0.0     |    eth0   |                                                                                                                        UG  |
+ci-info: |   1   | 169.254.169.254 |   0.0.0.0   | 255.255.255.255 |    eth0   |                                                                                                                        UH  |
+ci-info: |   2   |   172.31.32.0   |   0.0.0.0   |  255.255.240.0  |    eth0   |                                                                                                                        U   |
+ci-info: +-------+-----------------+-------------+-----------------+-----------+                                                                                                                     -------+
+ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: | Route | Destination | Gateway | Interface | Flags |
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: |   9   |  fe80::/64  |    ::   |    eth0   |   U   |
+ci-info: |   11  |    local    |    ::   |    eth0   |   U   |
+ci-info: |   12  |   ff00::/8  |    ::   |    eth0   |   U   |
+ci-info: +-------+-------------+---------+-----------+-------+
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:config' at Thu, 08 Aug 2019 04:                                                                                                                     42:56 +0000. Up 9.97 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 running 'modules:final' at Thu, 08 Aug 2019 04:4                                                                                                                     2:57 +0000. Up 10.62 seconds.
+Cloud-init v. 18.2-72.amzn2.0.7 finished at Thu, 08 Aug 2019 04:42:57 +0000. Dat                                                                                                                     asource DataSourceEc2.  Up 10.74 seconds
